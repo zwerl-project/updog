@@ -2,4 +2,11 @@ version: '3.8'
 services:
   updog:
     image: ghcr.io/zwerl-project/updog:main
+    container_name: zwerl-updog
     restart: always
+    environment:
+      - SERVER_IP=${SERVER_IP}
+      - SERVER_PORT=${SERVER_PORT}
+      - MC_USERNAME=${MC_USERNAME}
+      - MC_PASSWORD=${MC_PASSWORD}
+      - MC_AUTH=${MC_AUTH}
