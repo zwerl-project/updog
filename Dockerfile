@@ -5,7 +5,7 @@ FROM node:14-alpine
 WORKDIR /app
 
 # Copy the package.json and package-lock.json files to the container
-COPY package.json package-lock.json ./
+COPY package.json pnpm-lock.json ./
 
 # Install PNPM package manager
 RUN npm install -g pnpm
