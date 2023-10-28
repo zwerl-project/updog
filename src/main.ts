@@ -1,11 +1,13 @@
 import { createBot, Bot, BotOptions } from 'mineflayer';
-import { plugin as autoeat } from 'mineflayer-auto-eat';
+import { plugin as AutoEat } from 'mineflayer-auto-eat';
 
+import { NoChatReports } from './modules';
 import { expressions } from './expressions';
 import { env } from './environment';
 
 function registerEvents(bot: Bot, config: BotOptions) {
-	bot.loadPlugin(autoeat)
+	bot.loadPlugin(AutoEat)
+	bot.loadPlugin(NoChatReports)
 
 	bot.once('spawn', () => {
 		console.log(`Connected to server ${env.SERVER_IP}:${env.SERVER_PORT}...`);

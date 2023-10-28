@@ -1,0 +1,1 @@
+export {plugin as NoChatReports} from './no-chat-reports';
